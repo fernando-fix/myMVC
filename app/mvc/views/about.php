@@ -20,6 +20,13 @@
 
         echo "<hr>"; // ------------------------------------------------
 
+        $this->partial('header', [
+            'nome' => "Fernando",
+            'idade' => 33
+        ]);
+
+        echo "<hr>"; // ------------------------------------------------
+
         $variaveis = get_defined_vars();
         print_r($variaveis);
         ?>
