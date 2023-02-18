@@ -1,0 +1,15 @@
+{
+    "name": "fernando/coisa",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fernando Rodrigues",
+            "email": "fernando_tecti@hotmail.com"
+        }
+    ],
+    "require": {}
+}
