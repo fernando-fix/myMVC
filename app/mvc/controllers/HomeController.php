@@ -13,14 +13,29 @@ class HomeController extends Controller
 
     public function about()
     {
-        $id = 1;
-        $name = "Fernando";
-        $age = 33;
+        $users = [
+            [
+                'id' => 1,
+                'name' => 'Fernando',
+                'age' => 33
+            ],
+            [
+                'id' => 2,
+                'name' => 'Joana',
+                'age' => 23
+            ],
+            [
+                'id' => 3,
+                'name' => 'Gabriela',
+                'age' => 4
+            ],
+
+        ];
 
         $this->render("about", [
-            'id' => $id,
-            'name' => $name,
-            'age' => $age,
+            'users' => $users,
+            'loggedUser' => 'Fernando',
+            'token' => '34gh45hg65hg76hg34'
         ]);
     }
 
