@@ -13,22 +13,27 @@ class HomeController extends Controller
 
     public function about()
     {
-        $variavel1 = 'valor1';
-        $variavel2 = 'valor2';
+        $id = 1;
+        $name = "Fernando";
+        $age = 33;
 
         $this->render("about", [
-            'variavel1' => $variavel1,
-            'variavel2' => $variavel2
+            'id' => $id,
+            'name' => $name,
+            'age' => $age,
         ]);
     }
+
     public function vai()
     {
         $this->redirect('/sobre');
     }
+
     public function form()
     {
         $this->render('form');
     }
+
     public function formAction()
     {
         print_r($_POST);

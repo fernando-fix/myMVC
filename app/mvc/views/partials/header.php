@@ -1,11 +1,15 @@
-<h1>Olá eu sou um header de um partial</h1>
-<?php
-$variaveis = get_defined_vars();
-print_r($variaveis);
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
 
-if (isset($nome)) {
-    echo $nome;
-}
-
-?>
+<body>
+    <header>
+        <h1>Aqui é um header</h1>
+    </header>

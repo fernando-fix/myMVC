@@ -1,36 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php $this->partial('header'); ?>
+<?php $this->partial('aside'); ?>
 
-<head>
-    <title>About</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
-</head>
+<table border="1" style="width:100%">
+    <thead>
+        <th>id</th>
+        <th>nome</th>
+        <th>idade</th>
+    </thead>
+    <tbody>
+        <td><?= $id; ?></td>
+        <td><?= $name; ?></td>
+        <td><?= $age; ?></td>
+    </tbody>
+</table>
 
-<body>
-    <h1>About</h1>
-    <p>
-        Página sobre
-        <?php
-        echo "<pre>";
-        echo "<hr>"; // ------------------------------------------------
+<?php $this->partial('ad', ['anuncio1' => 'Bolo de pote 10 reais']); ?>
+<?php $this->partial('ad', ['anuncio2' => 'Cerveja 15 reais']); ?>
 
-        $this->partial('header');
-
-        echo "<hr>"; // ------------------------------------------------
-
-        $this->partial('header', [
-            'nome' => "Fernando",
-            'idade' => 33
-        ]);
-
-        echo "<hr>"; // ------------------------------------------------
-
-        $variaveis = get_defined_vars();
-        print_r($variaveis);
-        ?>
-    </p>
-</body>
-
-</html>
+<?php $this->partial('footer'); ?>

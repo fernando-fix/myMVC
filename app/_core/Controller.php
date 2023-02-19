@@ -10,13 +10,13 @@ class Controller
         if ($data) {
             extract($data);
         }
-        
-        $path = dirname(__FILE__, 2) . "\\mvc\\views\\";
-        
-        require_once $path . $page . ".php";
+
+        $path = dirname(__FILE__, 2) . "/mvc/views/";
+
+        require $path . $page . ".php";
         exit;
     }
-    
+
     // $data estará disponível como variáveis ao renderizar o partial
     public function partial(string $page, array $data = [])
     {
@@ -24,7 +24,7 @@ class Controller
             extract($data);
         }
 
-        $path = dirname(__FILE__, 2) . "\\mvc\\views\\partials\\";
+        $path = dirname(__FILE__, 2) . "/mvc/views/partials/";
 
         require $path . $page . ".php";
     }
