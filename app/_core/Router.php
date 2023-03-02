@@ -2,6 +2,8 @@
 
 namespace app\_core;
 
+use app\_core\Controller;
+
 class Router
 {
 
@@ -32,7 +34,8 @@ class Router
         $request = $_SERVER['REQUEST_METHOD'];
         $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
-        $findController = true;
+        //setado com padrão false para quando não achar o controller
+        $findController = false;
 
         foreach ($this->array as $value) {
 
@@ -55,11 +58,13 @@ class Router
 
                 //rodar método
                 $controllerInstance->{$value['method']}();
-                $findController = false;
+                $findController = true;
             }
         }
-        if ($findController === true) {
-            echo "Erro 404, página não encontrada!";
+        // Se não achou um controller ele renderiza a página 404
+        if ($findController === false) {
+            $newController = new Controller;
+            $newController->render("404");
         }
     }
 }
