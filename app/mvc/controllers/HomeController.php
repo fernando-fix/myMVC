@@ -3,6 +3,8 @@
 namespace app\mvc\controllers;
 
 use app\_core\Controller;
+use app\handlers\UserHandler;
+use app\mvc\models\User;
 
 class HomeController extends Controller
 {
